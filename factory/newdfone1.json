@@ -1,0 +1,9 @@
+{
+	"name": "newdfone1",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "04ec1df0-77a9-427d-a6b0-b69b35523a9b",
+		"tenantId": "806d981e-b582-4a31-83ff-31c9bdc87fa6"
+	}
+}
