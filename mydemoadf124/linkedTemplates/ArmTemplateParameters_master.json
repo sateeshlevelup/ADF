@@ -1,0 +1,30 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "mydemoadf124"
+		},
+		"AmazonS31_secretAccessKey": {
+			"value": ""
+		},
+		"myfirstls_connectionString": {
+			"value": ""
+		},
+		"mysink_accountKey": {
+			"value": ""
+		},
+		"AmazonS31_properties_typeProperties_accessKeyId": {
+			"value": "AKIARIPBLGLVSDVM4GMP"
+		},
+		"mysink_properties_typeProperties_url": {
+			"value": "https://myaccoutforsink.dfs.core.windows.net/"
+		},
+		"containerUri": {
+			"value": ""
+		},
+		"containerSasToken": {
+			"value": ""
+		}
+	}
+}
