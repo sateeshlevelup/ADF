@@ -36,7 +36,8 @@
 				"     validateSchema: false,",
 				"     ignoreNoFilesFound: false) ~> source1",
 				"source1 split(ERROR_FUNCTION(''),",
-				"     disjoint: false) ~> split1@(, )"
+				"     ERROR_FUNCTION(''),",
+				"     disjoint: false) ~> split1@(started, successd, accepted)"
 			]
 		}
 	}
