@@ -1,0 +1,68 @@
+{
+	"name": "log",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureBlobStorage1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "Log.csv",
+				"container": "csv"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "Correlation id",
+				"type": "String"
+			},
+			{
+				"name": "Operation name",
+				"type": "String"
+			},
+			{
+				"name": "Status",
+				"type": "String"
+			},
+			{
+				"name": "Event category",
+				"type": "String"
+			},
+			{
+				"name": "Level",
+				"type": "String"
+			},
+			{
+				"name": "Time",
+				"type": "String"
+			},
+			{
+				"name": "Subscription",
+				"type": "String"
+			},
+			{
+				"name": "Event initiated by",
+				"type": "String"
+			},
+			{
+				"name": "Resource type",
+				"type": "String"
+			},
+			{
+				"name": "Resource group",
+				"type": "String"
+			},
+			{
+				"name": "Resource",
+				"type": "String"
+			}
+		]
+	}
+}
