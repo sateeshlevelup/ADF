@@ -16,6 +16,9 @@
 			"transformations": [
 				{
 					"name": "derivedColumn1"
+				},
+				{
+					"name": "filter1"
 				}
 			],
 			"scriptLines": [
@@ -35,7 +38,8 @@
 				"     allowSchemaDrift: true,",
 				"     validateSchema: false,",
 				"     ignoreNoFilesFound: false) ~> source1",
-				"source1 derive(new = ERROR_FUNCTION('')) ~> derivedColumn1"
+				"source1 derive(new = ERROR_FUNCTION('')) ~> derivedColumn1",
+				"derivedColumn1 filter(ERROR_FUNCTION('')) ~> filter1"
 			]
 		}
 	}
