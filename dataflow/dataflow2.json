@@ -12,18 +12,10 @@
 					"name": "source1"
 				}
 			],
-			"sinks": [
-				{
-					"dataset": {
-						"referenceName": "log1",
-						"type": "DatasetReference"
-					},
-					"name": "sink1"
-				}
-			],
+			"sinks": [],
 			"transformations": [
 				{
-					"name": "select1"
+					"name": "derivedColumn1"
 				}
 			],
 			"scriptLines": [
@@ -43,35 +35,7 @@
 				"     allowSchemaDrift: true,",
 				"     validateSchema: false,",
 				"     ignoreNoFilesFound: false) ~> source1",
-				"source1 select(mapColumn(",
-				"          {Correlation id},",
-				"          {Operation name},",
-				"          Status,",
-				"          Customer_tYpe = Level,",
-				"          Time,",
-				"          membership = Subscription,",
-				"          {Event initiated by},",
-				"          Resource",
-				"     ),",
-				"     skipDuplicateMapInputs: true,",
-				"     skipDuplicateMapOutputs: true) ~> select1",
-				"select1 sink(allowSchemaDrift: true,",
-				"     validateSchema: false,",
-				"     input(",
-				"          Id as string,",
-				"          Correlationid as string,",
-				"          Operationname as string,",
-				"          Status as string,",
-				"          Eventcategory as string,",
-				"          Level as string,",
-				"          Time as string,",
-				"          Subscription as string,",
-				"          Eventinitiatedby as string,",
-				"          Resourcetype as string,",
-				"          Resourcegroup as string",
-				"     ),",
-				"     skipDuplicateMapInputs: true,",
-				"     skipDuplicateMapOutputs: true) ~> sink1"
+				"source1 derive(new = ERROR_FUNCTION('')) ~> derivedColumn1"
 			]
 		}
 	}
