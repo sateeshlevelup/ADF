@@ -1,0 +1,67 @@
+{
+	"name": "log1",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "target2",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"container": "new"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "Id",
+				"type": "String"
+			},
+			{
+				"name": "Correlationid",
+				"type": "String"
+			},
+			{
+				"name": "Operationname",
+				"type": "String"
+			},
+			{
+				"name": "Status",
+				"type": "String"
+			},
+			{
+				"name": "Eventcategory",
+				"type": "String"
+			},
+			{
+				"name": "Level",
+				"type": "String"
+			},
+			{
+				"name": "Time",
+				"type": "String"
+			},
+			{
+				"name": "Subscription",
+				"type": "String"
+			},
+			{
+				"name": "Eventinitiatedby",
+				"type": "String"
+			},
+			{
+				"name": "Resourcetype",
+				"type": "String"
+			},
+			{
+				"name": "Resourcegroup",
+				"type": "String"
+			}
+		]
+	}
+}
