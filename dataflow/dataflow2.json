@@ -15,10 +15,7 @@
 			"sinks": [],
 			"transformations": [
 				{
-					"name": "derivedColumn1"
-				},
-				{
-					"name": "filter1"
+					"name": "split1"
 				}
 			],
 			"scriptLines": [
@@ -38,8 +35,8 @@
 				"     allowSchemaDrift: true,",
 				"     validateSchema: false,",
 				"     ignoreNoFilesFound: false) ~> source1",
-				"source1 derive(new = ERROR_FUNCTION('')) ~> derivedColumn1",
-				"derivedColumn1 filter(ERROR_FUNCTION('')) ~> filter1"
+				"source1 split(ERROR_FUNCTION(''),",
+				"     disjoint: false) ~> split1@(, )"
 			]
 		}
 	}
