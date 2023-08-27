@@ -3,41 +3,11 @@
 	"properties": {
 		"type": "MappingDataFlow",
 		"typeProperties": {
-			"sources": [
-				{
-					"dataset": {
-						"referenceName": "log",
-						"type": "DatasetReference"
-					},
-					"name": "source1"
-				}
-			],
+			"sources": [],
 			"sinks": [],
-			"transformations": [
-				{
-					"name": "split1"
-				}
-			],
+			"transformations": [],
 			"scriptLines": [
-				"source(output(",
-				"          {Correlation id} as string,",
-				"          {Operation name} as string,",
-				"          Status as string,",
-				"          {Event category} as string,",
-				"          Level as string,",
-				"          Time as string,",
-				"          Subscription as string,",
-				"          {Event initiated by} as string,",
-				"          {Resource type} as string,",
-				"          {Resource group} as string,",
-				"          Resource as string",
-				"     ),",
-				"     allowSchemaDrift: true,",
-				"     validateSchema: false,",
-				"     ignoreNoFilesFound: false) ~> source1",
-				"source1 split(ERROR_FUNCTION(''),",
-				"     ERROR_FUNCTION(''),",
-				"     disjoint: false) ~> split1@(started, successd, accepted)"
+				""
 			]
 		}
 	}
