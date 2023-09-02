@@ -1,0 +1,9 @@
+{
+	"name": "newadffordemodp",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "7e77a632-37af-43b8-aece-6a534160a439",
+		"tenantId": "806d981e-b582-4a31-83ff-31c9bdc87fa6"
+	}
+}
