@@ -1,0 +1,9 @@
+{
+	"name": "mynewgrythg",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "313e5bba-86e9-4a10-9b3e-b4a2e00e3ec8",
+		"tenantId": "806d981e-b582-4a31-83ff-31c9bdc87fa6"
+	}
+}
